@@ -16,4 +16,5 @@
             "program": "${workspaceFolder}\\manage.py"
         }
     ]
+
 }
