@@ -13,8 +13,8 @@ class RecipeViewsTest(TestCase):
        
 
     def test_recipe_category_view_returns_404_if_no_recipes(self):   
-        response = self.client.get(reverse('recipes:category', kwargs={'category_id': 1}))
-        self.assertEqual(response.status_code, 200)
+        response = self.client.get(reverse('recipes:category', kwargs={'category_id': 1000}))
+        self.assertEqual(response.status_code, 404)
 
     def test_recipe_home_view_loads_correct_template(self):   
         response = self.client.get(reverse('recipes:home'))
